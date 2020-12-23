@@ -1,0 +1,34 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS | to do list</title>
+    <!-- Fontawesome Stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <h2 class="title">to do list <i class="fas fa-pencil-alt"></i></h2>
+
+      <div class="content">
+        <input
+          id="inputText"
+          type="text"
+          placeholder="Add to your list..."
+          maxlength="20"
+        />
+        <i id="addButton" class="fas fa-plus"></i>
+        <div class="remove-container">
+          <i id="delete-icon" class="far fa-trash-alt"></i>
+          <p id="remove-text">Delete All</p>
+        </div>
+        <ul id="display"></ul>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
