@@ -34,6 +34,7 @@ function createItem() {
     displayDone.appendChild(listItem);
     listItem.style.backgroundColor = "#54e346";
     listItem.style.textDecoration = "line-through";
+    editButton.style.display = "none";
   });
 }
 
