@@ -1,6 +1,7 @@
 // console.log("Hello from inside");
 const input = document.getElementById("inputText");
 const display = document.getElementById("display");
+const displayDone = document.getElementById("display-done");
 const button = document.getElementById("addButton");
 const deleteAll = document.getElementById("delete-icon");
 // const ul = document.getElementById("display");
@@ -8,17 +9,17 @@ const deleteAll = document.getElementById("delete-icon");
 // Create and Remove list item
 function createItem() {
   let listItem = document.createElement("li");
+  listItem.className = "create";
   listItem.appendChild(document.createTextNode(input.value));
   display.appendChild(listItem);
   input.value = "";
 
-  function createEditIcon() {
-    let editButton = document.createElement("input");
-    editButton.setAttribute("type", "button");
-    editButton.setAttribute("value", "edit");
-    editButton.setAttribute("id", "editButton");
-    display.appendChild(editButton);
-  }
+  let editButton = document.createElement("button");
+  editButton.innerText = "edit";
+  editButton.className = "edit";
+  editButton.addEventListener("click", (e) => {
+    // console.log("you are in right path");
+  });
 
   let removeTask = document.createElement("input");
   removeTask.setAttribute("type", "button");
@@ -27,8 +28,12 @@ function createItem() {
   removeTask.addEventListener("click", (e) => {
     listItem.parentNode.removeChild(listItem);
   });
-  createEditIcon();
+  listItem.appendChild(editButton);
   listItem.appendChild(removeTask);
+  listItem.addEventListener("dblclick", (e) => {
+    displayDone.appendChild(listItem);
+    listItem.style.backgroundColor = "#54e346";
+  });
 }
 
 //Make sure user fill the input
