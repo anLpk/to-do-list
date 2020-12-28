@@ -13,13 +13,19 @@ body {
   align-content: center;
 }
 
-.title {
+.title,
+.title-done {
   font-size: 3em;
   color: #b83b5e;
   margin-left: 25px;
 }
 
-.fas {
+.title-done {
+  font-size: 2em !important;
+}
+
+.fas,
+.far {
   color: #6a2c70 !important;
 }
 
@@ -55,7 +61,7 @@ ul {
 }
 
 li {
-  width: 18em;
+  width: 20em;
   background-color: #ffd66b;
   padding: 0.5em;
   margin-bottom: 10px;
@@ -73,16 +79,20 @@ li {
   text-decoration: line-through;
 }
 
-#removeButton {
+#removeButton,
+.edit {
+  font-family: "Indie Flower", "Shadows Into Light", cursive;
   background-color: transparent;
   border: 3px dashed #6a2c70;
   border-radius: 4px;
   height: 2em;
   float: right;
   margin-top: 0.2em;
+  font-weight: bolder;
 }
 
-#removeButton:hover {
+#removeButton:hover,
+.edit:hover {
   background-color: #6a2c70;
   color: white;
 }
@@ -111,4 +121,23 @@ input[type="text"] {
 .fa-trash-alt {
   font-size: 24px;
   color: #6a2c70;
+}
+
+.edit {
+  margin-left: 8px;
+  height: 2.2em !important;
+}
+
+/* Edit Task */
+
+ul li input[type="text"] {
+  display: none;
+}
+
+ul li.editMode input[type="text"] {
+  display: block;
+}
+
+ul li.editMode label {
+  display: none;
 }
