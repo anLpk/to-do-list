@@ -33,6 +33,7 @@ function createItem() {
   listItem.addEventListener("dblclick", (e) => {
     displayDone.appendChild(listItem);
     listItem.style.backgroundColor = "#54e346";
+    listItem.style.textDecoration = "line-through";
   });
 }
 
