@@ -44,11 +44,7 @@ body {
   background-color: white;
 }
 
-/* .fa-pencil-alt:hover {
-  transform: rotate(270deg);
-} */
-
-.content > input {
+#inputText {
   width: 24em;
   font-family: "Rock Salt", "Indie Flower", "Shadows Into Light", cursive;
   font-size: 1em;
@@ -106,6 +102,22 @@ input[type="text"] {
   padding-left: 0.5em;
 }
 
+.create > input {
+  font-family: "Rock Salt", "Indie Flower", "Shadows Into Light", cursive;
+  background-color: #ffd66b;
+  font-weight: bolder;
+  border: none;
+}
+
+.create > input:focus-within {
+  background: #b83b5e;
+  color: white;
+}
+
+#display-done > .create > input {
+  background-color: #54e346;
+}
+
 .remove-container {
   float: right;
   margin-left: 1em;
@@ -126,18 +138,4 @@ input[type="text"] {
 .edit {
   margin-left: 8px;
   height: 2.2em !important;
-}
-
-/* Edit Task */
-
-ul li input[type="text"] {
-  display: none;
-}
-
-ul li.editMode input[type="text"] {
-  display: block;
-}
-
-ul li.editMode label {
-  display: none;
 }
