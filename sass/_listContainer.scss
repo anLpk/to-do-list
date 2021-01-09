@@ -1,0 +1,43 @@
+.create {
+  max-width: 65%;
+  min-width: 16em;
+  min-height: 4.5em;
+  max-height: 6em;
+  background-color: $list-item-bg-color;
+  padding: 0.5rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  vertical-align: middle;
+  font-size: 1.2rem;
+  padding-top: 1.2rem;
+}
+
+#removeButton,
+.edit {
+  background-color: transparent;
+  border: 2px dashed $button-color;
+  padding: 0.75rem;
+  border-radius: 4px;
+  float: right;
+  font-weight: bolder;
+  vertical-align: middle;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+#removeButton:hover,
+.edit:hover {
+  cursor: pointer;
+  color: $button-text-color;
+  background-color: $button-color;
+  filter: brightness(120%);
+}
+
+#editInput {
+  background-color: $button-color;
+  color: $button-text-color;
+  border-radius: 8px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  max-width: 8em;
+}
