@@ -9,35 +9,64 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
     />
-    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="sass/style.css" />
   </head>
   <body>
-    <div class="main-container">
-      <h2 class="title">to do list <i class="fas fa-pencil-alt"></i></h2>
+    <main>
+      <section class="newItemEntry">
+        <h1>To Do List<i class="fas fa-pencil-alt"></i></h1>
+        <form id="itemEntryForm">
+          <label for="inputText">Add item to your to do list</label>
+          <input
+            id="inputText"
+            type="text"
+            placeholder="Add item..."
+            size="10"
+            maxlength="15"
+            autocomplete="off"
+            tabindex="0"
+            required
+          />
 
-      <div class="content">
-        <input
-          id="inputText"
-          type="text"
-          placeholder="Add to your list..."
-          maxlength="20"
-          required
-        />
-        <i id="addButton" class="fas fa-plus"></i>
-        <div class="remove-container">
-          <i id="delete-icon" class="far fa-trash-alt"></i>
-          <p id="remove-text">Delete All</p>
-        </div>
+          <button
+            id="addButton"
+            class="button"
+            title="Add new item"
+            aria-label="Add new item to your list"
+            tabindex="0"
+          >
+            +
+          </button>
+        </form>
+      </section>
+
+      <section class="displayItem">
         <ul id="display"></ul>
-      </div>
+      </section>
 
-      <div class="completed">
-        <h2 class="title-done">
-          completed tasks <i class="far fa-check-circle"></i>
-        </h2>
+      <section class="completedItem">
+        <div class="completed">
+          <h2 class="title-done">Completed</h2>
+          <button
+            id="delete-icon"
+            class="button"
+            title="Delete All"
+            aria-label="Delete all the item you have in your list"
+            tabindex="0"
+          >
+            Delete All
+          </button>
+        </div>
         <ul id="display-done"></ul>
-      </div>
-    </div>
+      </section>
+    </main>
+
     <script src="src/index.js"></script>
   </body>
 </html>
